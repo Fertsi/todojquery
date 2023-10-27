@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         filteredTasks.forEach((task, index) => {
             const listItem = document.createElement('li');
-            listItem.style.display = 'none'; // Initially hide the new task
+            listItem.style.display = 'none'; 
             listItem.innerHTML = `
                 <input type="checkbox" class="complete-checkbox" ${task.completed ? 'checked' : ''}>
                 <span class="${task.completed ? 'completed' : ''}">${task.text}</span>
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             todoList.appendChild(listItem);
-            $(listItem).fadeIn(); // Fade in the new task
+            $(listItem).fadeIn(); 
         });
 
         const activeTasksCount = tasks.filter(task => !task.completed).length;
